@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* ByoSync white-blue theme — modern, clean */
+:root {
+  --byosync-blue: #0f62fe;
+  --byosync-blue-dark: #0043ce;
+  --byosync-blue-light: #4589ff;
+  --byosync-blue-pale: #edf5ff;
+  --byosync-white: #ffffff;
+  --byosync-gray-50: #f8fafc;
+  --byosync-gray-100: #f1f5f9;
+  --byosync-gray-200: #e2e8f0;
+  --byosync-gray-300: #cbd5e1;
+  --byosync-gray-500: #64748b;
+  --byosync-gray-600: #475569;
+  --byosync-gray-700: #334155;
+  --byosync-gray-900: #0f172a;
+  --byosync-error: #dc2626;
+  --byosync-success: #059669;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  background: linear-gradient(180deg, var(--byosync-gray-50) 0%, #f1f5f9 100%);
+  color: var(--byosync-gray-900);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Focus ring for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--byosync-blue);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for interactive elements */
+button:not(:disabled),
+a {
+  transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+}

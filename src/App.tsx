@@ -8,6 +8,8 @@ import { IdentityView } from './pages/IdentityView';
 import { IdentityStatus } from './pages/IdentityStatus';
 import { IdentityHistory } from './pages/IdentityHistory';
 import { IdentityKeys } from './pages/IdentityKeys';
+import { ChallengeRequest } from './pages/ChallengeRequest';
+import { AuthJwks } from './pages/AuthJwks';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             <Route path="identity/:uuid/status" element={<IdentityStatus />} />
             <Route path="identity/:uuid/history" element={<IdentityHistory />} />
             <Route path="identity/:uuid/keys" element={<IdentityKeys />} />
+            <Route path="auth/challenge" element={<ChallengeRequest />} />
+            <Route path="auth/jwks" element={<AuthJwks />} />
           </Route>
         </Routes>
       </BrowserRouter>

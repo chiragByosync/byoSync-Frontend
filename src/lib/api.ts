@@ -1,6 +1,10 @@
 /**
  * API client using axios. Base URL from env; ready for backend connection.
  * Vite proxy in dev: /api -> http://localhost:8000
+ *
+ * Story 2.3: Assertion token (from verify) is NOT sent here. It is stored in memory
+ * via TokenService. For calls to verifier backends, use TokenService.getAssertionAuthHeader()
+ * and attach to the verifier request (Authorization: Bearer <assertion_token>).
  */
 import axios, { type AxiosError } from 'axios';
 
@@ -16,6 +20,7 @@ export const api = axios.create({
 
 api.interceptors.request.use((config) => {
   const apiKey = import.meta.env.VITE_API_KEY;
+  // Optional backend auth JWT (e.g. operator). Not the assertion_token from Story 2.3.
   const token =
     typeof window !== 'undefined' ? localStorage.getItem('byosync_jwt') : null;
   if (apiKey) config.headers.set('X-API-Key', apiKey);

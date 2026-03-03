@@ -105,7 +105,7 @@ export function IdentityKeys() {
   }, [uuid, rotateForm, fetchKeys]);
 
   const inputBase =
-    'mt-1 w-full rounded-xl border bg-[var(--byosync-gray-50)]/50 px-4 py-2.5 text-[var(--byosync-gray-900)] font-mono text-sm placeholder:text-[var(--byosync-gray-500)] transition focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--byosync-blue)]/20 focus:border-[var(--byosync-blue)]';
+    'input-focus mt-1 w-full rounded-xl border bg-[var(--byosync-gray-50)]/50 px-4 py-2.5 text-[var(--byosync-gray-900)] font-mono text-sm placeholder:text-[var(--byosync-gray-500)] transition hover:border-[var(--byosync-gray-300)] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--byosync-blue)]/20 focus:border-[var(--byosync-blue)]';
   const inputError = 'border-red-400 focus:ring-red-200 focus:border-red-500';
   const inputOk = 'border-[var(--byosync-gray-200)]';
 
@@ -127,7 +127,7 @@ export function IdentityKeys() {
         <button
           type="button"
           onClick={() => navigate('/')}
-          className="mt-4 rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-4 py-2.5 text-sm font-medium text-[var(--byosync-gray-700)] hover:bg-[var(--byosync-gray-50)]"
+          className="btn-secondary mt-4 rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-4 py-2.5 text-sm font-medium text-[var(--byosync-gray-700)]"
         >
           Back to home
         </button>
@@ -164,7 +164,7 @@ export function IdentityKeys() {
             {keys.map((key) => (
               <li
                 key={key.key_version}
-                className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[var(--byosync-gray-200)] bg-[var(--byosync-gray-50)]/30 px-4 py-3"
+                className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[var(--byosync-gray-200)] bg-[var(--byosync-gray-50)]/30 px-4 py-3 transition hover:border-[var(--byosync-gray-300)] hover:bg-[var(--byosync-gray-50)]/60 hover:shadow-sm"
               >
                 <div className="flex items-center gap-3">
                   <span className="rounded-lg bg-[var(--byosync-blue-pale)] px-2.5 py-1 text-sm font-semibold text-[var(--byosync-blue)]">
@@ -205,7 +205,7 @@ export function IdentityKeys() {
           </div>
         )}
 
-        <div className="rounded-xl border border-[var(--byosync-blue-pale)] bg-[var(--byosync-blue-pale)]/20 p-4 text-sm text-[var(--byosync-gray-700)]">
+        <div className="rounded-xl border border-[var(--byosync-blue-pale)] bg-[var(--byosync-blue-pale)]/20 p-4 text-sm text-[var(--byosync-gray-700)] transition hover:bg-[var(--byosync-blue-pale)]/30">
           <p className="font-medium text-[var(--byosync-gray-900)]">Signature message format</p>
           <p className="mt-1 font-mono text-xs">
             rotate:{uuid}:{'<timestamp>'}
@@ -280,7 +280,7 @@ export function IdentityKeys() {
             type="button"
             onClick={handleRotate}
             disabled={rotateLoading}
-            className="rounded-xl bg-[var(--byosync-blue)] px-5 py-2.5 font-semibold text-white shadow-lg shadow-[var(--byosync-blue)]/20 transition hover:bg-[var(--byosync-blue-dark)] disabled:opacity-60"
+            className="btn-primary rounded-xl bg-[var(--byosync-blue)] px-5 py-2.5 font-semibold text-white shadow-lg shadow-[var(--byosync-blue)]/20 disabled:opacity-60 disabled:hover:transform-none"
           >
             {rotateLoading ? (
               <span className="flex items-center gap-2">
@@ -297,14 +297,14 @@ export function IdentityKeys() {
         <button
           type="button"
           onClick={() => navigate(`/identity/${encodeURIComponent(uuid ?? '')}`)}
-          className="rounded-xl bg-[var(--byosync-blue)] px-5 py-2.5 font-semibold text-white shadow-lg shadow-[var(--byosync-blue)]/20 transition hover:bg-[var(--byosync-blue-dark)]"
+          className="btn-primary rounded-xl bg-[var(--byosync-blue)] px-5 py-2.5 font-semibold text-white shadow-lg shadow-[var(--byosync-blue)]/20"
         >
           View identity
         </button>
         <button
           type="button"
           onClick={() => navigate('/')}
-          className="rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)] transition hover:bg-[var(--byosync-gray-50)]"
+          className="btn-secondary rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)]"
         >
           Back to home
         </button>

@@ -54,7 +54,7 @@ const initialForm: FormData = {
 };
 
 const inputBase =
-  'mt-1 w-full rounded-xl border bg-[var(--byosync-gray-50)]/50 px-4 py-2.5 text-[var(--byosync-gray-900)] placeholder:text-[var(--byosync-gray-500)] transition focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--byosync-blue)]/20 focus:border-[var(--byosync-blue)]';
+  'input-focus mt-1 w-full rounded-xl border bg-[var(--byosync-gray-50)]/50 px-4 py-2.5 text-[var(--byosync-gray-900)] placeholder:text-[var(--byosync-gray-500)] transition hover:border-[var(--byosync-gray-300)] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--byosync-blue)]/20 focus:border-[var(--byosync-blue)]';
 const inputError = 'border-red-400 focus:ring-red-200 focus:border-red-500';
 const inputOk = 'border-[var(--byosync-gray-200)]';
 
@@ -363,7 +363,7 @@ export function IdentityCreate() {
           <button
             type="submit"
             disabled={loading}
-            className="rounded-xl bg-[var(--byosync-blue)] px-6 py-3 font-semibold text-white shadow-lg shadow-[var(--byosync-blue)]/25 transition hover:bg-[var(--byosync-blue-dark)] hover:shadow-xl disabled:opacity-60"
+            className="btn-primary rounded-xl bg-[var(--byosync-blue)] px-6 py-3 font-semibold text-white shadow-lg shadow-[var(--byosync-blue)]/25 disabled:opacity-60 disabled:hover:transform-none"
           >
             {loading ? (
               <span className="flex items-center gap-2">
@@ -376,7 +376,7 @@ export function IdentityCreate() {
           <button
             type="button"
             onClick={() => navigate('/')}
-            className="rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-6 py-3 font-semibold text-[var(--byosync-gray-700)] transition hover:border-[var(--byosync-gray-300)] hover:bg-[var(--byosync-gray-50)]"
+            className="btn-secondary rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-6 py-3 font-semibold text-[var(--byosync-gray-700)]"
           >
             Cancel
           </button>

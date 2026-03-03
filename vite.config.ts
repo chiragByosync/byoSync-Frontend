@@ -11,6 +11,11 @@ export default defineConfig({
         target: 'http://localhost:8000',
         changeOrigin: true,
       },
+      // Story 2.3 — JWKS lives on backend; proxy so /.well-known/jwks.json hits backend
+      '/.well-known': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
     },
   },
 })

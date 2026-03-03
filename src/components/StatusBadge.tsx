@@ -14,7 +14,7 @@ export function StatusBadge({ status, className = '' }: Props) {
   };
   return (
     <span
-      className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ${styles[status]} ${className}`}
+      className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold transition hover:scale-105 ${styles[status]} ${className}`}
     >
       {status}
     </span>

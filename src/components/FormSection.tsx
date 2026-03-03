@@ -17,10 +17,10 @@ export function FormSection({
 }: Props) {
   return (
     <section
-      className={`rounded-2xl border border-[var(--byosync-gray-200)] bg-white p-6 shadow-sm transition hover:shadow-md sm:p-8 ${className}`}
+      className={`card-hover rounded-2xl border border-[var(--byosync-gray-200)] bg-white p-6 shadow-sm transition hover:border-[var(--byosync-gray-300)] hover:shadow-md sm:p-8 ${className}`}
     >
       <div className="mb-6 flex items-start gap-3">
-        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--byosync-blue-pale)] text-[var(--byosync-blue)] text-lg">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--byosync-blue-pale)] text-[var(--byosync-blue)] text-lg transition duration-200 hover:scale-105">
           {icon}
         </span>
         <div>
@@ -28,7 +28,7 @@ export function FormSection({
             {title}
           </h2>
           {description && (
-            <p className="mt-0.5 text-sm text-[var(--byosync-gray-500)]">
+            <p className="mt-0.5 text-sm leading-relaxed text-[var(--byosync-gray-500)]">
               {description}
             </p>
           )}

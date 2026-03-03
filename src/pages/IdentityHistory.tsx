@@ -71,7 +71,7 @@ export function IdentityHistory() {
         <button
           type="button"
           onClick={() => navigate('/')}
-          className="mt-4 rounded-xl border border-[var(--byosync-gray-300)] bg-white px-4 py-2.5 text-sm font-medium text-[var(--byosync-gray-700)] hover:bg-[var(--byosync-gray-50)]"
+          className="btn-secondary mt-4 rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-4 py-2.5 text-sm font-medium text-[var(--byosync-gray-700)]"
         >
           Back to home
         </button>
@@ -90,7 +90,7 @@ export function IdentityHistory() {
         </p>
       </div>
 
-      <div className="rounded-2xl border border-[var(--byosync-gray-200)] bg-white shadow-sm overflow-hidden">
+      <div className="card-hover rounded-2xl border border-[var(--byosync-gray-200)] bg-white shadow-sm overflow-hidden">
         {events.length === 0 ? (
           <div className="px-6 py-12 text-center text-[var(--byosync-gray-500)]">
             No lifecycle events recorded yet.
@@ -108,14 +108,14 @@ export function IdentityHistory() {
         <button
           type="button"
           onClick={() => navigate(`/identity/${encodeURIComponent(uuid ?? '')}`)}
-          className="rounded-xl bg-[var(--byosync-blue)] px-5 py-2.5 font-semibold text-white shadow-lg shadow-[var(--byosync-blue)]/20 transition hover:bg-[var(--byosync-blue-dark)]"
+          className="btn-primary rounded-xl bg-[var(--byosync-blue)] px-5 py-2.5 font-semibold text-white shadow-lg shadow-[var(--byosync-blue)]/20"
         >
           View identity
         </button>
         <button
           type="button"
           onClick={() => navigate('/')}
-          className="rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)] transition hover:bg-[var(--byosync-gray-50)]"
+          className="btn-secondary rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)]"
         >
           Back to home
         </button>
@@ -130,7 +130,7 @@ function EventRow({ event }: { event: LifecycleEvent }) {
   const raw = event.status ?? (event as { event_type?: string }).event_type ?? '—';
   const isStatus = VALID_STATUSES.includes(raw as (typeof VALID_STATUSES)[number]);
   return (
-    <li className="px-6 py-4 sm:px-8 sm:py-5">
+    <li className="px-6 py-4 transition hover:bg-[var(--byosync-gray-50)]/80 sm:px-8 sm:py-5">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="flex items-center gap-3">
           {isStatus ? (

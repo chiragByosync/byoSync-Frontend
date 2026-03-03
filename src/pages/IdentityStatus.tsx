@@ -153,7 +153,7 @@ export function IdentityStatus() {
         <button
           type="button"
           onClick={() => navigate('/')}
-          className="mt-4 rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-4 py-2.5 text-sm font-medium text-[var(--byosync-gray-700)] hover:bg-[var(--byosync-gray-50)]"
+          className="btn-secondary mt-4 rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-4 py-2.5 text-sm font-medium text-[var(--byosync-gray-700)]"
         >
           Back to home
         </button>
@@ -179,7 +179,7 @@ export function IdentityStatus() {
         </p>
       </div>
 
-      <div className="rounded-2xl border border-[var(--byosync-gray-200)] bg-white p-6 shadow-sm sm:p-8">
+      <div className="card-hover rounded-2xl border border-[var(--byosync-gray-200)] bg-white p-6 shadow-sm sm:p-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-sm font-medium text-[var(--byosync-gray-500)]">UUID</p>
@@ -205,7 +205,7 @@ export function IdentityStatus() {
       </div>
 
       {/* Lifecycle actions */}
-      <div className="mt-8 rounded-2xl border border-[var(--byosync-gray-200)] bg-white p-6 shadow-sm sm:p-8">
+      <div className="card-hover mt-8 rounded-2xl border border-[var(--byosync-gray-200)] bg-white p-6 shadow-sm sm:p-8">
         <h2 className="text-lg font-semibold text-[var(--byosync-gray-900)]">
           Lifecycle actions
         </h2>
@@ -223,7 +223,7 @@ export function IdentityStatus() {
               type="button"
               onClick={() => setSuspendOpen(true)}
               disabled={!!actionLoading}
-              className="rounded-xl border-2 border-amber-300 bg-amber-50 px-4 py-2.5 text-sm font-semibold text-amber-800 transition hover:bg-amber-100 disabled:opacity-50"
+              className="rounded-xl border-2 border-amber-300 bg-amber-50 px-4 py-2.5 text-sm font-semibold text-amber-800 transition hover:scale-[1.02] hover:bg-amber-100 hover:shadow-md disabled:opacity-50 active:scale-[0.98]"
             >
               Suspend
             </button>
@@ -233,7 +233,7 @@ export function IdentityStatus() {
               type="button"
               onClick={handleReactivate}
               disabled={!!actionLoading}
-              className="rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 transition hover:bg-emerald-700 disabled:opacity-50"
+              className="rounded-xl bg-emerald-600 px-4 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 transition hover:scale-[1.02] hover:bg-emerald-700 hover:shadow-xl disabled:opacity-50 active:scale-[0.98]"
             >
               {actionLoading === 'reactivate' ? (
                 <span className="flex items-center gap-2">
@@ -249,7 +249,7 @@ export function IdentityStatus() {
               type="button"
               onClick={() => setRevokeOpen(true)}
               disabled={!!actionLoading}
-              className="rounded-xl border-2 border-red-300 bg-red-50 px-4 py-2.5 text-sm font-semibold text-red-700 transition hover:bg-red-100 disabled:opacity-50"
+              className="rounded-xl border-2 border-red-300 bg-red-50 px-4 py-2.5 text-sm font-semibold text-red-700 transition hover:scale-[1.02] hover:bg-red-100 hover:shadow-md disabled:opacity-50 active:scale-[0.98]"
             >
               Revoke
             </button>
@@ -259,7 +259,7 @@ export function IdentityStatus() {
           <button
             type="button"
             onClick={() => navigate(`/identity/${encodeURIComponent(data.uuid)}/history`)}
-            className="text-sm font-medium text-[var(--byosync-blue)] hover:underline"
+            className="rounded-lg px-2 py-1 text-sm font-medium text-[var(--byosync-blue)] transition hover:bg-[var(--byosync-blue-pale)] hover:scale-[1.02] active:scale-[0.98]"
           >
             View lifecycle history →
           </button>
@@ -270,28 +270,28 @@ export function IdentityStatus() {
         <button
           type="button"
           onClick={() => navigate(`/identity/${encodeURIComponent(data.uuid)}`)}
-          className="rounded-xl bg-[var(--byosync-blue)] px-5 py-2.5 font-semibold text-white shadow-lg shadow-[var(--byosync-blue)]/20 transition hover:bg-[var(--byosync-blue-dark)]"
+          className="btn-primary rounded-xl bg-[var(--byosync-blue)] px-5 py-2.5 font-semibold text-white shadow-lg shadow-[var(--byosync-blue)]/20"
         >
           View full identity
         </button>
         <button
           type="button"
           onClick={() => navigate(`/identity/${encodeURIComponent(data.uuid)}/history`)}
-          className="rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)] transition hover:bg-[var(--byosync-gray-50)]"
+          className="btn-secondary rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)]"
         >
           View history
         </button>
         <button
           type="button"
           onClick={() => navigate(`/identity/${encodeURIComponent(data.uuid)}/keys`)}
-          className="rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)] transition hover:bg-[var(--byosync-gray-50)]"
+          className="btn-secondary rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)]"
         >
           Manage keys
         </button>
         <button
           type="button"
           onClick={() => navigate('/')}
-          className="rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)] transition hover:bg-[var(--byosync-gray-50)]"
+          className="btn-secondary rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)]"
         >
           Back to home
         </button>

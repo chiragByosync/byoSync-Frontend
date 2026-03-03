@@ -172,19 +172,17 @@ export function IdentityView() {
   const canRevoke = status === 'ACTIVE' || status === 'SUSPENDED';
 
   return (
-    <div className="mx-auto max-w-3xl">
+    <div className="mx-auto max-w-3xl space-y-8">
       {created && (
-        <div className="mb-6 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 to-teal-50/50 p-4 text-emerald-800 shadow-sm">
+        <div className="mb-8 rounded-2xl border border-emerald-200 bg-gradient-to-r from-emerald-50 to-teal-50/50 p-5 text-emerald-800 shadow-[var(--shadow-card)]">
           <p className="font-semibold">Identity created successfully.</p>
           <p className="mt-1 text-sm opacity-90">UUID: {created.uuid}</p>
         </div>
       )}
 
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-[var(--byosync-gray-900)]">
-          Identity
-        </h1>
-        <p className="mt-2 text-[var(--byosync-gray-500)]">
+      <div className="mb-10">
+        <h1 className="heading-page">Identity</h1>
+        <p className="mt-3 subheading">
           Metadata and lifecycle. No PII returned in plain text.
         </p>
       </div>

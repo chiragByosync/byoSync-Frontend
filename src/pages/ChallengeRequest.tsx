@@ -276,11 +276,9 @@ export function ChallengeRequest() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-[var(--byosync-gray-900)]">
-          Request challenge
-        </h1>
-        <p className="mt-2 text-[var(--byosync-gray-500)]">
+      <div className="mb-10">
+        <h1 className="heading-page">Request challenge</h1>
+        <p className="mt-3 subheading">
           Issue a cryptographic challenge nonce. Identity proves ownership by signing the challenge. Requires API Key with <code className="rounded bg-[var(--byosync-gray-100)] px-1 font-mono text-xs">auth:challenge</code>.
         </p>
       </div>  

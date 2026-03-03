@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { FileText, Activity, ArrowLeft } from 'lucide-react';
 
 export function IdentityLookup() {
   const [uuid, setUuid] = useState('');
@@ -21,14 +23,23 @@ export function IdentityLookup() {
 
   return (
     <div className="mx-auto max-w-lg">
-      <h1 className="text-3xl font-bold tracking-tight text-[var(--byosync-gray-900)]">
-        Look up Identity
-      </h1>
-      <p className="mt-2 text-[var(--byosync-gray-500)]">
-        Enter an identity UUID to view metadata or status. Requires JWT with identity:read.
-      </p>
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35 }}
+      >
+        <h1 className="heading-page">Look up Identity</h1>
+        <p className="mt-3 subheading">
+          Enter an identity UUID to view metadata or status. Requires JWT with identity:read.
+        </p>
+      </motion.div>
 
-      <div className="card-hover mt-8 rounded-2xl border border-[var(--byosync-gray-200)] bg-white p-6 shadow-sm sm:p-8">
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.08, duration: 0.35 }}
+        className="card-hover mt-10 rounded-2xl border border-[var(--byosync-gray-200)] bg-white/95 p-6 shadow-[var(--shadow-card)] backdrop-blur-sm sm:p-8"
+      >
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
             <label className="block text-sm font-medium text-[var(--byosync-gray-700)]">
@@ -46,29 +57,35 @@ export function IdentityLookup() {
             <button
               type="submit"
               disabled={!uuid.trim()}
-              className="btn-primary rounded-xl bg-[var(--byosync-blue)] px-5 py-2.5 font-semibold text-white shadow-lg shadow-[var(--byosync-blue)]/20 disabled:opacity-50 disabled:hover:transform-none"
+              className="btn-primary flex items-center gap-2 rounded-xl bg-[var(--byosync-blue)] px-5 py-2.5 font-semibold text-white shadow-lg shadow-[var(--byosync-blue)]/20 disabled:opacity-50 disabled:hover:transform-none"
             >
+              <FileText className="h-4 w-4" />
               View metadata
             </button>
             <button
               type="button"
               onClick={handleStatusOnly}
               disabled={!uuid.trim()}
-              className="btn-secondary rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)] transition disabled:opacity-50"
+              className="btn-secondary flex items-center gap-2 rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)] transition disabled:opacity-50"
             >
+              <Activity className="h-4 w-4" />
               View status only
             </button>
           </div>
         </form>
-      </div>
+      </motion.div>
 
-      <button
+      <motion.button
         type="button"
         onClick={() => navigate('/')}
-        className="mt-6 rounded-lg px-2 py-1.5 text-sm font-medium text-[var(--byosync-blue)] transition hover:bg-[var(--byosync-blue-pale)] hover:scale-[1.02] active:scale-[0.98]"
+        className="mt-8 flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-[var(--byosync-blue)] transition-all duration-300 hover:bg-[var(--byosync-blue-pale)] hover:-translate-y-0.5 active:scale-[0.98]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.15 }}
       >
-        ← Back to home
-      </button>
+        <ArrowLeft className="h-4 w-4" />
+        Back to home
+      </motion.button>
     </div>
   );
 }

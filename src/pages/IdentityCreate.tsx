@@ -129,11 +129,9 @@ export function IdentityCreate() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-[var(--byosync-gray-900)]">
-          Create Identity
-        </h1>
-        <p className="mt-2 text-[var(--byosync-gray-500)]">
+      <div className="mb-10">
+        <h1 className="heading-page">Create Identity</h1>
+        <p className="mt-3 subheading">
           Register a new identity. Personal data is encrypted at rest.
         </p>
       </div>

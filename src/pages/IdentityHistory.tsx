@@ -81,16 +81,14 @@ export function IdentityHistory() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-[var(--byosync-gray-900)]">
-          Lifecycle History
-        </h1>
-        <p className="mt-2 text-[var(--byosync-gray-500)]">
+      <div className="mb-10">
+        <h1 className="heading-page">Lifecycle History</h1>
+        <p className="mt-3 subheading">
           Full event history for this identity. Requires JWT with identity:read.
         </p>
       </div>
 
-      <div className="card-hover rounded-2xl border border-[var(--byosync-gray-200)] bg-white shadow-sm overflow-hidden">
+      <div className="card-hover rounded-2xl border border-[var(--byosync-gray-200)] bg-white/95 shadow-[var(--shadow-card)] overflow-hidden backdrop-blur-sm">
         {events.length === 0 ? (
           <div className="px-6 py-12 text-center text-[var(--byosync-gray-500)]">
             No lifecycle events recorded yet.

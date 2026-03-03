@@ -139,11 +139,9 @@ export function IdentityKeys() {
 
   return (
     <div className="mx-auto max-w-3xl">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-[var(--byosync-gray-900)]">
-          Key management
-        </h1>
-        <p className="mt-2 text-[var(--byosync-gray-500)]">
+      <div className="mb-10">
+        <h1 className="heading-page">Key management</h1>
+        <p className="mt-3 subheading">
           List key versions and rotate to a new public key. Requires JWT (identity holder for rotate).
         </p>
       </div>

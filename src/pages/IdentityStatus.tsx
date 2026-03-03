@@ -170,11 +170,9 @@ export function IdentityStatus() {
 
   return (
     <div className="mx-auto max-w-2xl">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-[var(--byosync-gray-900)]">
-          Identity Status
-        </h1>
-        <p className="mt-2 text-[var(--byosync-gray-500)]">
+      <div className="mb-10">
+        <h1 className="heading-page">Identity Status</h1>
+        <p className="mt-3 subheading">
           Current lifecycle status and actions.
         </p>
       </div>

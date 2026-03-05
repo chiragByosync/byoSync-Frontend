@@ -77,6 +77,18 @@ export function AuthHome() {
           </Link>
         </motion.div>
       </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.35 }}
+        className="mt-14 rounded-2xl border border-[var(--byosync-blue-pale)] bg-white/80 px-6 py-5 shadow-sm backdrop-blur-sm"
+      >
+        <p className="text-[0.9375rem] font-semibold text-[var(--byosync-gray-900)]">Proof-of-key authentication</p>
+        <p className="mt-2 text-[0.9375rem] text-[var(--byosync-gray-600)] leading-relaxed">
+          Request a challenge nonce for an identity; the holder signs it with their private key. Use JWKS to verify signatures and tokens. Supports attendance, KYC checks, and gated access without storing passwords or biometrics.
+        </p>
+      </motion.div>
     </div>
   );
 }

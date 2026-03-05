@@ -38,9 +38,19 @@ export function Home() {
         </p>
       </motion.div>
 
+      {/* About ByoSync — on page, above options */}
+      <motion.p
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.4 }}
+        className="mt-10 max-w-2xl mx-auto text-center text-[0.9375rem] sm:text-base text-[var(--byosync-gray-600)] leading-relaxed"
+      >
+        ByoSync combines <strong className="text-[var(--byosync-gray-800)] font-medium">identity records</strong> (public key, KYC, lifecycle), a <strong className="text-[var(--byosync-gray-800)] font-medium">consent engine</strong> aligned with DPDP 2023, <strong className="text-[var(--byosync-gray-800)] font-medium">verifier management</strong> with scoped API keys, and <strong className="text-[var(--byosync-gray-800)] font-medium">proof-of-key authentication</strong>—so you can verify who someone is without storing biometric data.
+      </motion.p>
+
       {/* Vertical full-width dashboard cards */}
       <motion.div
-        className="mt-16 space-y-6"
+        className="mt-12 space-y-6"
         variants={container}
         initial="hidden"
         animate="show"
@@ -140,19 +150,6 @@ export function Home() {
             </div>
           </Link>
         </motion.div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 0.4 }}
-        className="mt-16 rounded-2xl border border-[var(--byosync-blue-pale)] bg-white/90 px-6 py-6 shadow-sm backdrop-blur-sm transition hover:shadow-md"
-      >
-        <p className="text-base font-semibold tracking-tight text-[var(--byosync-gray-900)]">Where to see lifecycle options</p>
-        <ul className="mt-3 space-y-2 text-[0.9375rem] text-[var(--byosync-gray-600)] leading-relaxed">
-          <li><strong className="text-[var(--byosync-gray-800)]">After creating an identity</strong> — you're taken to the identity page; scroll to the <strong className="text-[var(--byosync-gray-800)]">Lifecycle</strong> section.</li>
-          <li><strong className="text-[var(--byosync-gray-800)]">From Look up</strong> — enter a UUID, then <strong className="text-[var(--byosync-gray-800)]">View metadata</strong> or <strong className="text-[var(--byosync-gray-800)]">View status only</strong>. Both show lifecycle actions, <strong className="text-[var(--byosync-gray-800)]">View lifecycle history</strong>, and <strong className="text-[var(--byosync-gray-800)]">Manage keys</strong>.</li>
-        </ul>
       </motion.div>
 
       <p className="mt-12 text-sm font-medium tracking-tight text-[var(--byosync-gray-500)]">

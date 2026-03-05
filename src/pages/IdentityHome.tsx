@@ -77,6 +77,18 @@ export function IdentityHome() {
           </Link>
         </motion.div>
       </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.35 }}
+        className="mt-14 rounded-2xl border border-[var(--byosync-blue-pale)] bg-white/80 px-6 py-5 shadow-sm backdrop-blur-sm"
+      >
+        <p className="text-[0.9375rem] font-semibold text-[var(--byosync-gray-900)]">Identity records</p>
+        <p className="mt-2 text-[0.9375rem] text-[var(--byosync-gray-600)] leading-relaxed">
+          Identities are stored with a public key, KYC level, sector, and lifecycle state—no biometrics. Create identities, look up by UUID, and manage status (active, suspended, revoked), lifecycle history, and key rotation from the lookup flow.
+        </p>
+      </motion.div>
     </div>
   );
 }

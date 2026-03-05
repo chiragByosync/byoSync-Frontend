@@ -152,7 +152,7 @@ export function IdentityStatus() {
         </ErrorMessage>
         <button
           type="button"
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/identity')}
           className="btn-secondary mt-4 rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-4 py-2.5 text-sm font-medium text-[var(--byosync-gray-700)]"
         >
           Back to home
@@ -288,7 +288,7 @@ export function IdentityStatus() {
         </button>
         <button
           type="button"
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/identity')}
           className="btn-secondary rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)]"
         >
           Back to home

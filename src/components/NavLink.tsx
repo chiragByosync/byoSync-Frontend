@@ -14,7 +14,7 @@ export function NavLink({ to, children, icon: Icon }: Props) {
   return (
     <Link
       to={to}
-      className="group relative flex items-center gap-2 rounded-lg px-3.5 py-2.5 text-sm font-medium text-[var(--byosync-gray-600)] transition-colors duration-200 hover:text-[var(--byosync-blue)]"
+      className="group relative flex items-center gap-2 rounded-lg px-3.5 py-2.5 text-sm font-medium tracking-tight text-[var(--byosync-gray-600)] transition-all duration-250 hover:text-[var(--byosync-blue)]"
     >
       {Icon && <Icon className="h-4 w-4 shrink-0 opacity-70 group-hover:opacity-100" strokeWidth={2} />}
       <span>{children}</span>

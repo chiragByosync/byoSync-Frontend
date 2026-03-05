@@ -77,7 +77,7 @@ export function IdentityLookup() {
 
       <motion.button
         type="button"
-        onClick={() => navigate('/')}
+        onClick={() => navigate('/identity')}
         className="mt-8 flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-medium text-[var(--byosync-blue)] transition-all duration-300 hover:bg-[var(--byosync-blue-pale)] hover:-translate-y-0.5 active:scale-[0.98]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

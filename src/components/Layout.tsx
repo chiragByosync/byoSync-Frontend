@@ -3,10 +3,10 @@ import { Outlet, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   Home,
-  UserPlus,
-  Search,
-  ShieldCheck,
-  Key,
+  Fingerprint,
+  ClipboardList,
+  Building2,
+  Shield,
 } from 'lucide-react';
 import { NavLink } from './NavLink';
 
@@ -43,16 +43,16 @@ export function Layout() {
               alt="ByoSync"
               className="h-9 w-auto object-contain"
             />
-            <span className="text-lg font-bold tracking-tight text-[var(--byosync-gray-900)]">
+            <span className="text-lg font-bold tracking-tight text-[var(--byosync-gray-900)]" style={{ fontFamily: 'var(--font-display)' }}>
               ByoSync
             </span>
           </Link>
           <nav className="flex items-center gap-0.5">
             <NavLink to="/" icon={Home}>Home</NavLink>
-            <NavLink to="/identity/create" icon={UserPlus}>Create Identity</NavLink>
-            <NavLink to="/identity/lookup" icon={Search}>Look up</NavLink>
-            <NavLink to="/auth/challenge" icon={ShieldCheck}>Challenge</NavLink>
-            <NavLink to="/auth/jwks" icon={Key}>JWKS</NavLink>
+            <NavLink to="/identity" icon={Fingerprint}>Identity</NavLink>
+            <NavLink to="/consent" icon={ClipboardList}>Consent</NavLink>
+            <NavLink to="/verifier" icon={Building2}>Verifier</NavLink>
+            <NavLink to="/auth" icon={Shield}>Auth</NavLink>
           </nav>
         </div>
       </header>

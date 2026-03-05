@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Key, ArrowLeft, Home } from 'lucide-react';
+import { Key, ArrowLeft } from 'lucide-react';
 import { ErrorMessage } from '../components/ErrorMessage';
 import { LoadingSpinner } from '../components/LoadingSpinner';
 import { FormSection } from '../components/FormSection';
@@ -177,10 +177,10 @@ export function AuthJwks() {
           <Key className="h-4 w-4" /> Request challenge
         </Link>
         <Link
-          to="/"
+          to="/auth"
           className="btn-secondary inline-flex items-center gap-2 rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-5 py-2.5 font-semibold text-[var(--byosync-gray-700)]"
         >
-          <Home className="h-4 w-4" /> Home
+          <ArrowLeft className="h-4 w-4" /> Back to Auth
         </Link>
       </div>
     </div>

@@ -373,7 +373,7 @@ export function IdentityCreate() {
           </button>
           <button
             type="button"
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/identity')}
             className="btn-secondary rounded-xl border-2 border-[var(--byosync-gray-200)] bg-white px-6 py-3 font-semibold text-[var(--byosync-gray-700)]"
           >
             Cancel
